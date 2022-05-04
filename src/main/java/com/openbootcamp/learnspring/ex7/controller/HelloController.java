@@ -25,15 +25,5 @@ public class HelloController {
         return  "hello world";
     }
 
-    @GetMapping("/laptops")
-    public List<Laptop> laptops(){
-        return laptop.findAll();
-    }
 
-    @PostMapping("/crearLaptop")
-    public ResponseEntity<Laptop> crearLaptop(@RequestBody Laptop lap){
-
-        laptop.save(lap);
-        return ResponseEntity.ok(lap);
-    }
 }
